@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="testproj" verbose="5">
-    <test name="testDemo1">
+<suite name="testproj" verbose="10">
+    <test name="testDemo1" enabled="false">
         <classes>
-            <class name="com.testnglixj.testngdemo1.TestngDemo1">
+            <class name="com.testnglixj.testngdemo1.TestngMVC">
                 <methods>
-                    <exclude name="test_01"></exclude>
+                    <exclude name=".*"></exclude>
                 </methods>
             </class>
+            <class name="com.testnglixj.testngdemo1.TestngDemo1"></class>
+        </classes>
+    </test>
+    
+    <test name="test_demo2" verbose="1">
+        <parameter name="arg" value="argument04"></parameter>
+        <!--<groups>-->
+            <!--<run>-->
+                <!--&lt;!&ndash;<include name="demo3"/>&ndash;&gt;-->
+                <!--<exclude name="demo2"/>-->
+            <!--</run>-->
+        <!--</groups>-->
+
+        <classes>
+            <class name="com.testnglixj.testngdemo1.TestngDemo2"/>
         </classes>
     </test>
 
 </suite>
+
+
